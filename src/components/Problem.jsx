@@ -58,13 +58,6 @@ export default function Problem() {
                     />
                 </div>
             </div>
-
-            <div className="mt-16 text-center">
-                <a href="#contact" className="inline-flex items-center justify-center gap-2 bg-primary text-white hover:bg-primary-light px-8 py-4 rounded-full font-bold text-lg transition-all shadow-lg hover:-translate-y-1">
-                    {t.nav.bookCall}
-                    <ArrowRight size={20} />
-                </a>
-            </div>
         </section>
     );
 }

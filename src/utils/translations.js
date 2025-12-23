@@ -17,7 +17,7 @@ export const translations = {
             ctaPrimary: 'Book Free Audit',
             ctaSecondary: '',
             trustBar: {
-                line1: 'Built by École 42 & UM6P engineers • 10+ businesses automated across EMEA',
+                line1: 'Built by École 42 & UM6P engineers • 10+ businesses automated',
                 line2: '✓ Manufacturing  ✓ Hospitality  ✓ Professional Services',
             },
         },
@@ -535,7 +535,7 @@ export const translations = {
             ctaPrimary: 'Réserver un Audit',
             ctaSecondary: '',
             trustBar: {
-                line1: 'Construit par des ingénieurs École 42 & UM6P • 10+ entreprises automatisées en EMEA',
+                line1: 'Construit par des ingénieurs École 42 & UM6P • 10+ entreprises automatisées',
                 line2: '✓ Industrie  ✓ Hôtellerie  ✓ Services Professionnels',
             },
         },

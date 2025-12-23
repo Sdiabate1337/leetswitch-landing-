@@ -44,7 +44,7 @@ export default function Hero() {
           </span>
         </div>
 
-        <h1 className={`${isFrench ? 'text-3xl sm:text-6xl lg:text-[5rem]' : 'text-4xl sm:text-7xl lg:text-[6rem]'} font-bold text-graphite tracking-tight leading-[1.05] sm:leading-[1] mb-6 sm:mb-8 transition-all duration-300`}>
+        <h1 className={`${isFrench ? 'text-3xl sm:text-6xl lg:text-[5rem]' : 'text-4xl sm:text-7xl lg:text-[6rem]'} font-bold text-white tracking-tight leading-[1.05] sm:leading-[1] mb-6 sm:mb-8 transition-all duration-300`}>
           {t.hero.titleLine1} <br />
           {t.hero.titleLine2} <span className="text-primary">{t.hero.titleSpan}</span>.
         </h1>
@@ -55,7 +55,9 @@ export default function Hero() {
 
         <div className="flex flex-col sm:flex-row gap-4 justify-center items-center w-full mb-16">
           <a
-            href="#contact"
+            href="https://calendly.com/diabatesekou1337/audit-offerte-leetswitch"
+            target="_blank"
+            rel="noopener noreferrer"
             className="inline-flex items-center justify-center gap-2 bg-primary hover:bg-primary-light text-white px-10 py-5 rounded-full font-bold text-xl transition-all shadow-xl shadow-primary/20 hover:shadow-2xl hover:-translate-y-1 min-w-[200px]"
           >
             {t.hero.ctaPrimary}
