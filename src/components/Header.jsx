@@ -25,7 +25,9 @@ export default function Header() {
 
   return (
     <header
-      className={`fixed w-full z-50 transition-all duration-300 ${isScrolled || isMobileMenuOpen ? 'bg-[#0a0a0f]/80 backdrop-blur-md border-b border-white/10 py-3 shadow-lg' : 'bg-transparent py-5'
+      className={`fixed w-full z-50 transition-all duration-500 ${isScrolled || isMobileMenuOpen 
+        ? 'bg-background/80 backdrop-blur-xl border-b border-white/5 py-4 shadow-lg' 
+        : 'bg-transparent py-6'
         }`}
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -46,9 +48,10 @@ export default function Header() {
               <a
                 key={link.href}
                 href={link.href}
-                className="text-sm font-medium text-light-slate/80 hover:text-white transition-colors tracking-wide"
+                className="text-sm font-medium text-gray-400 hover:text-white transition-colors tracking-wide relative group"
               >
                 {link.name}
+                <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-primary transition-all duration-300 group-hover:w-full" />
               </a>
             ))}
 
@@ -56,21 +59,22 @@ export default function Header() {
             <button
               onClick={toggleLanguage}
               aria-label={language === 'en' ? 'Changer la langue en Français' : 'Switch language to English'}
-              className="flex items-center gap-2 px-3 py-1.5 rounded-full bg-white/5 hover:bg-white/10 border border-white/5 text-sm font-bold text-light-slate transition-colors"
+              className="flex items-center gap-2 px-3 py-1.5 rounded-full bg-white/5 hover:bg-white/10 border border-white/5 text-sm font-bold text-gray-300 transition-colors"
             >
               <Globe size={16} aria-hidden="true" />
-              <span className={language === 'en' ? 'text-primary' : 'text-light-slate/50'}>EN</span>
-              <span className="text-light-slate/30">/</span>
-              <span className={language === 'fr' ? 'text-primary' : 'text-light-slate/50'}>FR</span>
+              <span className={language === 'en' ? 'text-primary' : 'text-gray-500'}>EN</span>
+              <span className="text-gray-700">/</span>
+              <span className={language === 'fr' ? 'text-primary' : 'text-gray-500'}>FR</span>
             </button>
 
             <a
               href="https://calendly.com/diabatesekou1337/audit-offerte-leetswitch"
               target="_blank"
               rel="noopener noreferrer"
-              className="bg-white text-graphite px-5 py-2.5 rounded-full text-sm font-bold hover:bg-primary hover:text-white transition-all shadow-[0_0_20px_rgba(255,255,255,0.1)] hover:shadow-[0_0_20px_rgba(76,110,245,0.4)] hover:-translate-y-0.5 transform duration-200"
+              className="relative overflow-hidden bg-white text-background px-6 py-2.5 rounded-full text-sm font-bold hover:text-white transition-all shadow-[0_0_20px_rgba(255,255,255,0.1)] hover:shadow-[0_0_20px_rgba(59,130,246,0.4)] hover:-translate-y-0.5 transform duration-300 group"
             >
-              {t.nav.bookCall}
+              <span className="relative z-10">{t.nav.bookCall}</span>
+              <div className="absolute inset-0 bg-primary transform scale-x-0 group-hover:scale-x-100 transition-transform origin-left duration-300 ease-out" />
             </a>
           </nav>
 
@@ -79,15 +83,15 @@ export default function Header() {
             <button
               onClick={toggleLanguage}
               aria-label={language === 'en' ? 'Changer la langue en Français' : 'Switch language to English'}
-              className="flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-white/5 border border-white/10 text-xs font-bold text-light-slate"
+              className="flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-white/5 border border-white/10 text-xs font-bold text-gray-300"
             >
-              <span className={language === 'en' ? 'text-primary' : 'text-light-slate/50'}>EN</span>
-              <span className="text-light-slate/30">/</span>
-              <span className={language === 'fr' ? 'text-primary' : 'text-light-slate/50'}>FR</span>
+              <span className={language === 'en' ? 'text-primary' : 'text-gray-500'}>EN</span>
+              <span className="text-gray-700">/</span>
+              <span className={language === 'fr' ? 'text-primary' : 'text-gray-500'}>FR</span>
             </button>
 
             <button
-              className="text-white"
+              className="text-white p-2 hover:bg-white/5 rounded-full transition-colors"
               onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
               aria-label={isMobileMenuOpen ? 'Fermer le menu' : 'Ouvrir le menu'}
               aria-expanded={isMobileMenuOpen}

@@ -1,4 +1,4 @@
-import { ArrowRight, Play } from 'lucide-react';
+import { ArrowRight, Play, ChevronRight } from 'lucide-react';
 import { useLanguage } from '../context/LanguageContext';
 
 export default function Hero() {
@@ -6,73 +6,85 @@ export default function Hero() {
   const isFrench = language === 'fr';
 
   return (
-    <section className="relative pt-24 pb-12 lg:pt-48 lg:pb-32 overflow-hidden bg-background min-h-[80vh] sm:min-h-[90vh] flex items-center">
-      {/* Cinematic Background Layer */}
-      {/* Professional Background Layer */}
-      <div className="absolute inset-0 pointer-events-none overflow-hidden bg-[#0a0a0f]">
+    <section className="relative pt-32 pb-20 lg:pt-48 lg:pb-32 overflow-hidden min-h-screen flex items-center justify-center">
+      {/* Premium Background System */}
+      <div className="absolute inset-0 pointer-events-none overflow-hidden bg-background">
+        
+        {/* 1. Gradient Mesh / Aurora Effect */}
+        <div className="absolute top-[-20%] left-[-10%] w-[70%] h-[70%] bg-primary/20 rounded-full blur-[120px] animate-float" />
+        <div className="absolute bottom-[-20%] right-[-10%] w-[70%] h-[70%] bg-secondary/20 rounded-full blur-[120px] animate-float" style={{ animationDelay: '-3s' }} />
+        
+        {/* 2. Grid Pattern Overlay */}
+        <div className="absolute inset-0 bg-[linear-gradient(rgba(255,255,255,0.03)_1px,transparent_1px),linear-gradient(90deg,rgba(255,255,255,0.03)_1px,transparent_1px)] bg-[size:64px_64px] [mask-image:radial-gradient(ellipse_60%_50%_at_50%_0%,#000_70%,transparent_100%)]" />
 
-        {/* 1. Grain/Noise Texture - The "Expensive" Feel */}
-        <div
-          className="absolute inset-0 opacity-[0.03] mix-blend-overlay"
-          style={{
-            backgroundImage: `url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.8' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)'/%3E%3C/svg%3E")`
-          }}
+        {/* 3. Noise Texture for "Expensive" Feel */}
+        <div className="absolute inset-0 opacity-[0.04] mix-blend-overlay" 
+             style={{ backgroundImage: `url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.65' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)'/%3E%3C/svg%3E")` }} 
         />
-
-        {/* 2. The Spotlight "God Ray" - Single Source of Truth */}
-        <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[800px] h-[600px] bg-[radial-gradient(circle_at_center,rgba(76,110,245,0.15)_0%,rgba(76,110,245,0)_70%)] blur-[80px]" />
-
-        {/* 3. The Grid - Structured Engineering */}
-        <div className="absolute inset-0 bg-[linear-gradient(to_right,#80808012_1px,transparent_1px),linear-gradient(to_bottom,#80808012_1px,transparent_1px)] bg-[size:24px_24px] [mask-image:radial-gradient(ellipse_60%_50%_at_50%_0%,#000_70%,transparent_100%)]" />
-
-        {/* 4. Subtle Accent Glows (Restrained) */}
-        <div className="absolute top-[-100px] left-1/4 w-[300px] h-[300px] bg-primary/20 rounded-full blur-[100px] opacity-40" />
-        <div className="absolute top-[-100px] right-1/4 w-[300px] h-[300px] bg-electric-blue/10 rounded-full blur-[100px] opacity-40" />
-
       </div>
 
-      <div className="relative max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 text-center z-10">
+      <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center z-10 flex flex-col items-center">
 
-        {/* Announcement Badge */}
-        <div className="inline-flex items-center gap-2 bg-white border border-light-slate shadow-sm px-3 py-1 sm:px-4 sm:py-1.5 rounded-full text-[10px] sm:text-sm font-semibold mb-6 sm:mb-8 transition-transform hover:scale-105 cursor-default mx-auto max-w-[90vw]">
-          <span className="relative flex h-2 w-2 shrink-0">
-            <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-accent-green opacity-75"></span>
-            <span className="relative inline-flex rounded-full h-2 w-2 bg-accent-green"></span>
+        {/* Premium Badge */}
+        <div className="inline-flex items-center gap-2 bg-white/[0.03] border border-white/[0.08] backdrop-blur-md px-4 py-2 rounded-full mb-8 transition-all hover:bg-white/[0.05] hover:border-primary/30 group cursor-default">
+          <span className="relative flex h-2 w-2">
+            <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-accent-emerald opacity-75"></span>
+            <span className="relative inline-flex rounded-full h-2 w-2 bg-accent-emerald"></span>
           </span>
-          <span className="text-graphite truncate max-w-[280px] sm:max-w-none">
+          <span className="text-sm font-medium text-gray-300 tracking-wide group-hover:text-white transition-colors">
             {t.hero.badge}
           </span>
+          <ChevronRight className="w-4 h-4 text-gray-500 group-hover:text-primary transition-colors" />
         </div>
 
-        <h1 className={`${isFrench ? 'text-3xl sm:text-6xl lg:text-[5rem]' : 'text-4xl sm:text-7xl lg:text-[6rem]'} font-bold text-white tracking-tight leading-[1.05] sm:leading-[1] mb-6 sm:mb-8 transition-all duration-300`}>
+        {/* Main Headline */}
+        <h1 className={`
+          ${isFrench ? 'text-4xl sm:text-6xl lg:text-7xl' : 'text-5xl sm:text-7xl lg:text-8xl'} 
+          font-bold tracking-tight leading-[1.1] mb-8
+          bg-clip-text text-transparent bg-gradient-to-b from-white via-white to-gray-400
+          drop-shadow-sm
+        `}>
           {t.hero.titleLine1} <br />
-          {t.hero.titleLine2} <span className="text-primary">{t.hero.titleSpan}</span>.
+          <span className="bg-clip-text text-transparent bg-gradient-to-r from-primary via-primary-light to-secondary animate-gradient-x">
+            {t.hero.titleLine2} {t.hero.titleSpan}
+          </span>
         </h1>
 
-        <p className={`${isFrench ? 'text-base sm:text-xl' : 'text-lg sm:text-2xl'} text-soft-indigo/90 mb-10 sm:mb-12 max-w-3xl mx-auto leading-relaxed font-medium px-4 sm:px-0 transition-all duration-300`}>
+        {/* Subtitle */}
+        <p className="text-lg sm:text-xl text-gray-400 mb-12 max-w-2xl mx-auto leading-relaxed font-light">
           {t.hero.subtitle}
         </p>
 
-        <div className="flex flex-col sm:flex-row gap-4 justify-center items-center w-full mb-16">
+        {/* CTA Buttons */}
+        <div className="flex flex-col sm:flex-row gap-6 justify-center items-center w-full mb-20">
           <a
             href="https://calendly.com/diabatesekou1337/audit-offerte-leetswitch"
             target="_blank"
             rel="noopener noreferrer"
-            className="inline-flex items-center justify-center gap-2 bg-primary hover:bg-primary-light text-white px-10 py-5 rounded-full font-bold text-xl transition-all shadow-xl shadow-primary/20 hover:shadow-2xl hover:-translate-y-1 min-w-[200px]"
+            className="group relative inline-flex items-center justify-center gap-3 bg-primary hover:bg-primary-dark text-white px-8 py-4 rounded-xl font-semibold text-lg transition-all duration-300 shadow-[0_0_20px_rgba(59,130,246,0.3)] hover:shadow-[0_0_30px_rgba(59,130,246,0.5)] hover:-translate-y-1 overflow-hidden"
           >
+            <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/20 to-transparent translate-x-[-100%] group-hover:translate-x-[100%] transition-transform duration-700" />
             {t.hero.ctaPrimary}
-            <ArrowRight size={22} />
+            <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
           </a>
+          
+          <button className="group inline-flex items-center justify-center gap-3 px-8 py-4 rounded-xl font-medium text-gray-300 hover:text-white border border-white/10 hover:border-white/20 hover:bg-white/5 transition-all duration-300">
+            <Play className="w-5 h-5 fill-current opacity-0 group-hover:opacity-100 transition-opacity -ml-2" />
+            <span>View Demo</span>
+          </button>
         </div>
 
-        {/* Trust Bar */}
-        <div className="pt-10 border-t border-light-slate/40 max-w-2xl mx-auto">
-          <p className="text-sm font-bold text-graphite mb-3">
-            {t.hero.trustBar?.line1}
+        {/* Trust Bar / Social Proof */}
+        <div className="pt-12 border-t border-white/5 w-full max-w-4xl mx-auto">
+          <p className="text-sm font-medium text-gray-500 mb-6 uppercase tracking-widest">
+            {t.hero.trustBar?.line1 || "Trusted by innovative teams"}
           </p>
-          <p className="text-xs font-semibold text-soft-indigo uppercase tracking-wider">
-            {t.hero.trustBar?.line2}
-          </p>
+          <div className="flex flex-wrap justify-center gap-8 opacity-50 grayscale hover:grayscale-0 transition-all duration-500">
+            {/* Placeholder logos - replace with actual SVGs */}
+            {[1, 2, 3, 4].map((i) => (
+              <div key={i} className="h-8 w-32 bg-white/10 rounded animate-pulse" />
+            ))}
+          </div>
         </div>
 
       </div>

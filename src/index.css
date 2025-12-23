@@ -10,6 +10,22 @@
   body {
     @apply bg-background text-graphite font-sans antialiased;
     line-height: 1.6;
+    background-image: linear-gradient(135deg, #0A0E27 0%, #050812 100%);
+    min-height: 100vh;
+  }
+}
+
+@layer utilities {
+  .glass-effect {
+    @apply bg-white/5 backdrop-blur-md border border-white/10 shadow-xl;
+  }
+  
+  .text-gradient {
+    @apply bg-clip-text text-transparent bg-gradient-to-r from-primary to-secondary;
+  }
+
+  .premium-card {
+    @apply bg-card-gradient border border-white/5 shadow-card backdrop-blur-xl transition-all duration-500 hover:-translate-y-1 hover:shadow-card-hover hover:border-primary/40;
   }
 }
 
