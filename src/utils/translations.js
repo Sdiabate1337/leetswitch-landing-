@@ -17,7 +17,7 @@ export const translations = {
             ctaPrimary: 'Book Free Audit',
             ctaSecondary: '',
             trustBar: {
-                line1: 'Built by École 42 & UM6P engineers • 10+ businesses automated',
+                line1: 'Built by École 42 & UM6P engineers • 10+ businesses automated across EMEA',
                 line2: '✓ Manufacturing  ✓ Hospitality  ✓ Professional Services',
             },
         },
@@ -197,7 +197,7 @@ export const translations = {
                     happens: {
                         title: 'What Happens',
                         items: [
-                            'Dev custom n8n workflows',
+                            'Dev custom enterprise workflows',
                             'Config & Test AI Agents',
                             'API Integration with your stack',
                             'Rigorous testing (50+ scenarios)'
@@ -298,7 +298,7 @@ export const translations = {
                         title: 'Typical Scope:',
                         items: ['Multi-channel lead capture', 'WhatsApp/Email auto-qualification', 'CRM integration & lead scoring', 'Automated follow-up sequences']
                     },
-                    tech: 'Built With: n8n, OpenAI API, WhatsApp/Email APIs, your CRM',
+                    tech: 'Built With: Enterprise Automation, Advanced AI Models, WhatsApp/Email APIs, your CRM',
                     bestFor: {
                         title: 'Best For:',
                         items: ['Businesses getting 50+ leads/month', 'Sales team spending hours on unqualified prospects', 'Leads going cold due to slow response']
@@ -321,7 +321,7 @@ export const translations = {
                         title: 'Typical Scope:',
                         items: ['Email monitoring & AI invoice extraction', 'Data validation & approval workflows', 'Accounting software integration', 'Payment tracking & reminders']
                     },
-                    tech: 'Built With: n8n, Claude API (OCR), accounting APIs, Slack',
+                    tech: 'Built With: Enterprise Automation, Advanced Vision Models (OCR), accounting APIs, Slack',
                     bestFor: {
                         title: 'Best For:',
                         items: ['Processing 100+ invoices/month manually', 'Late payment fees adding up', 'No real-time visibility on cash flow']
@@ -344,7 +344,7 @@ export const translations = {
                         title: 'Typical Scope:',
                         items: ['Multi-channel support intake', 'AI knowledge base assistant (RAG)', 'Auto-response for common queries', 'Intelligent escalation to humans']
                     },
-                    tech: 'Built With: n8n, OpenAI API, vector database, ticketing system',
+                    tech: 'Built With: Enterprise Automation, Advanced AI Models, vector database, ticketing system',
                     bestFor: {
                         title: 'Best For:',
                         items: ['Support team handling 30+ tickets/day', '50%+ are repetitive questions', 'Long response times hurting satisfaction']
@@ -367,7 +367,7 @@ export const translations = {
                         title: 'Typical Scope:',
                         items: ['Automatic lead enrichment', 'AI-powered lead scoring', 'Personalized outreach generation', 'Multi-touch follow-up sequences']
                     },
-                    tech: 'Built With: n8n, enrichment APIs, OpenAI, your CRM',
+                    tech: 'Built With: Enterprise Automation, enrichment APIs, Advanced AI Models, your CRM',
                     bestFor: {
                         title: 'Best For:',
                         items: ['B2B sales teams researching prospects manually', 'Leads sitting cold in CRM', 'No systematic follow-up process']
@@ -442,7 +442,7 @@ export const translations = {
             subtitle: 'Everything you need to know about our automation services.',
             items: [
                 { q: 'How long does it take to deploy an automation?', a: 'Most automations are deployed within 1-2 weeks, depending on complexity. Simple workflows can be live in just a few days, while custom AI agents may take 3-4 weeks for full implementation and testing.' },
-                { q: 'What tools and platforms do you integrate with?', a: 'We work with all major platforms including n8n, Make (Integromat), Zapier, and custom APIs. We integrate with CRMs (HubSpot, Salesforce), communication tools (Slack, WhatsApp, Email), and virtually any system with an API.' },
+                { q: 'What tools and platforms do you integrate with?', a: 'We work with best-in-class enterprise automation platforms and custom APIs. We integrate with CRMs (HubSpot, Salesforce), communication tools (Slack, WhatsApp, Email), and virtually any system with an API.' },
                 { q: 'Do I need technical knowledge to use the automations?', a: 'No technical knowledge required. We handle all the technical setup and provide training. Our automations run in the background, and we provide simple dashboards for monitoring and basic adjustments.' },
                 { q: 'What happens if something breaks?', a: 'All our packages include support periods. We monitor critical automations and receive alerts for any issues. Our team responds quickly to fix problems, and we build redundancy into mission-critical workflows.' },
                 { q: 'Can automations be modified after deployment?', a: 'Absolutely. Business needs evolve, and so should your automations. We offer optimization services and can modify existing workflows. Growth and Custom packages include ongoing adjustments.' },
@@ -484,7 +484,7 @@ export const translations = {
                     badge: 'Async',
                     items: ['What process is killing you', 'Your industry & team size', 'Rough timeline expectations'],
                     desc: 'Prefer to write it out? Send us your context.',
-                    button: 'hello@leetswitch.com',
+                    button: 'contact@leetswitch.com',
                     note: 'Response time: <24 hours'
                 }
             },
@@ -535,7 +535,7 @@ export const translations = {
             ctaPrimary: 'Réserver un Audit',
             ctaSecondary: '',
             trustBar: {
-                line1: 'Construit par des ingénieurs École 42 & UM6P • 10+ entreprises automatisées',
+                line1: 'Construit par des ingénieurs École 42 & UM6P • 10+ entreprises automatisées en EMEA',
                 line2: '✓ Industrie  ✓ Hôtellerie  ✓ Services Professionnels',
             },
         },
@@ -715,7 +715,7 @@ export const translations = {
                     happens: {
                         title: 'Ce qui se passe',
                         items: [
-                            'Dev workflows n8n sur mesure',
+                            'Dev workflows enterprise sur mesure',
                             'Config & Test Agents IA',
                             'Intégration API avec votre stack',
                             'Tests rigoureux (50+ scénarios)'
@@ -823,7 +823,7 @@ export const translations = {
                     badge: 'Asynchrone',
                     items: ['Quel process vous tue ?', 'Votre industrie & taille équipe', 'Vos attentes de délais'],
                     desc: 'Vous préférez écrire ? Envoyez-nous le contexte.',
-                    button: 'hello@leetswitch.com',
+                    button: 'contact@leetswitch.com',
                     note: 'Réponse : <24 heures'
                 }
             },

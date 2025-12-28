@@ -23,20 +23,23 @@ export default function Header() {
     { name: t.nav.contact, href: '#contact' },
   ];
 
+  const textColorClass = isScrolled ? 'text-white' : 'text-graphite';
+  const navLinkClass = isScrolled ? 'text-white/90 hover:text-primary' : 'text-graphite/80 hover:text-primary';
+
   return (
     <header
-      className={`fixed w-full z-50 transition-all duration-300 ${isScrolled || isMobileMenuOpen ? 'bg-[#0a0a0f]/80 backdrop-blur-md border-b border-white/10 py-3 shadow-lg' : 'bg-transparent py-5'
+      className={`fixed w-full z-50 transition-all duration-300 ${isScrolled || isMobileMenuOpen ? 'bg-obsidian/95 backdrop-blur-md border-b border-white/10 py-3 shadow-lg' : 'bg-transparent py-5'
         }`}
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center">
-          <a href="#" className="flex items-center gap-3 group cursor-pointer" aria-label="LeetSwitch - Retour à l'accueil">
+          <a href="#" className="flex items-center gap-3 group cursor-pointer">
             <div className="relative">
               <div className="absolute inset-0 bg-primary/20 blur-xl opacity-0 group-hover:opacity-100 transition-opacity duration-300 rounded-full" />
-              <img src="/logo.png" alt="LeetSwitch Logo" width="40" height="40" className="h-10 w-auto object-contain relative z-10 transition-transform duration-300 group-hover:scale-110 drop-shadow-[0_0_8px_rgba(255,255,255,0.1)]" />
+              <img src="/logo.png" alt="LeetSwitch Mark" className="h-10 w-auto object-contain relative z-10 transition-transform duration-300 group-hover:scale-110 drop-shadow-[0_0_8px_rgba(255,255,255,0.1)]" />
             </div>
-            <span className="text-xl font-bold text-white tracking-tight relative">
-              Leet<span className="text-primary group-hover:text-primary-light transition-colors">Switch</span>
+            <span className={`text-xl font-bold tracking-tight relative transition-colors duration-300 ${textColorClass}`}>
+              Leet<span className="text-brand-logo group-hover:text-brand-logo/80 transition-colors">Switch</span>
             </span>
           </a>
 
@@ -46,7 +49,7 @@ export default function Header() {
               <a
                 key={link.href}
                 href={link.href}
-                className="text-sm font-medium text-light-slate/80 hover:text-white transition-colors tracking-wide"
+                className={`text-sm font-medium transition-colors tracking-wide ${navLinkClass}`}
               >
                 {link.name}
               </a>
@@ -55,20 +58,23 @@ export default function Header() {
             {/* Language Toggle */}
             <button
               onClick={toggleLanguage}
-              aria-label={language === 'en' ? 'Changer la langue en Français' : 'Switch language to English'}
-              className="flex items-center gap-2 px-3 py-1.5 rounded-full bg-white/5 hover:bg-white/10 border border-white/5 text-sm font-bold text-light-slate transition-colors"
+              className={`flex items-center gap-2 px-3 py-1.5 rounded-full border text-sm font-bold transition-colors ${isScrolled
+                ? 'bg-white/10 hover:bg-white/20 border-white/10 text-white'
+                : 'bg-graphite/5 hover:bg-graphite/10 border-graphite/5 text-graphite'
+                }`}
             >
-              <Globe size={16} aria-hidden="true" />
-              <span className={language === 'en' ? 'text-primary' : 'text-light-slate/50'}>EN</span>
-              <span className="text-light-slate/30">/</span>
-              <span className={language === 'fr' ? 'text-primary' : 'text-light-slate/50'}>FR</span>
+              <Globe size={16} />
+              <span className={language === 'en' ? 'text-brand-logo' : (isScrolled ? 'text-white/50' : 'text-graphite/50')}>EN</span>
+              <span className={isScrolled ? 'text-white/30' : 'text-graphite/30'}>/</span>
+              <span className={language === 'fr' ? 'text-brand-logo' : (isScrolled ? 'text-white/50' : 'text-graphite/50')}>FR</span>
             </button>
 
             <a
-              href="https://calendly.com/diabatesekou1337/audit-offerte-leetswitch"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="bg-white text-graphite px-5 py-2.5 rounded-full text-sm font-bold hover:bg-primary hover:text-white transition-all shadow-[0_0_20px_rgba(255,255,255,0.1)] hover:shadow-[0_0_20px_rgba(76,110,245,0.4)] hover:-translate-y-0.5 transform duration-200"
+              href="#contact"
+              className={`px-5 py-2.5 rounded-full text-sm font-bold transition-all shadow-[0_0_20px_rgba(47,47,47,0.1)] hover:-translate-y-0.5 transform duration-200 cursor-pointer ${isScrolled
+                ? 'bg-white text-obsidian hover:bg-primary hover:text-white hover:shadow-[0_0_20px_rgba(76,110,245,0.4)]'
+                : 'bg-graphite text-white hover:bg-primary hover:shadow-[0_0_20px_rgba(76,110,245,0.4)]'
+                }`}
             >
               {t.nav.bookCall}
             </a>
@@ -78,19 +84,19 @@ export default function Header() {
           <div className="flex items-center gap-4 md:hidden">
             <button
               onClick={toggleLanguage}
-              aria-label={language === 'en' ? 'Changer la langue en Français' : 'Switch language to English'}
-              className="flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-white/5 border border-white/10 text-xs font-bold text-light-slate"
+              className={`flex items-center gap-1.5 px-3 py-1.5 rounded-full border text-xs font-bold ${isScrolled
+                ? 'bg-white/10 border-white/10 text-white'
+                : 'bg-white/5 border-white/10 text-light-slate'
+                }`}
             >
-              <span className={language === 'en' ? 'text-primary' : 'text-light-slate/50'}>EN</span>
-              <span className="text-light-slate/30">/</span>
-              <span className={language === 'fr' ? 'text-primary' : 'text-light-slate/50'}>FR</span>
+              <span className={language === 'en' ? 'text-brand-logo' : 'opacity-50'}>EN</span>
+              <span className="opacity-30">/</span>
+              <span className={language === 'fr' ? 'text-brand-logo' : 'opacity-50'}>FR</span>
             </button>
 
             <button
-              className="text-white"
+              className={isScrolled ? 'text-white' : 'text-white'} // Always white on mobile for now as mobile header background logic might be different or simple
               onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-              aria-label={isMobileMenuOpen ? 'Fermer le menu' : 'Ouvrir le menu'}
-              aria-expanded={isMobileMenuOpen}
             >
               {isMobileMenuOpen ? <X size={24} /> : <Menu size={24} />}
             </button>
@@ -100,7 +106,7 @@ export default function Header() {
 
       {/* Mobile Menu */}
       {isMobileMenuOpen && (
-        <div className="absolute top-full left-0 w-full bg-[#0a0a0f] border-b border-light-slate/10 md:hidden shadow-2xl animate-in slide-in-from-top-5">
+        <div className="absolute top-full left-0 w-full bg-obsidian border-b border-light-slate/10 md:hidden shadow-2xl animate-in slide-in-from-top-5">
           <div className="px-4 py-8 space-y-6">
             {navLinks.map((link) => (
               <a
@@ -113,9 +119,7 @@ export default function Header() {
               </a>
             ))}
             <a
-              href="https://calendly.com/diabatesekou1337/audit-offerte-leetswitch"
-              target="_blank"
-              rel="noopener noreferrer"
+              href="#contact"
               className="block text-center bg-primary text-white px-5 py-4 rounded-xl text-lg font-bold hover:bg-primary-light transition-colors shadow-lg shadow-primary/20"
               onClick={() => setIsMobileMenuOpen(false)}
             >

@@ -92,11 +92,8 @@ export default function Team() {
                                 >
                                     <img
                                         src={member.image}
-                                        alt={`Miniature de ${member.name}`}
-                                        width="80"
-                                        height="96"
+                                        alt={member.name}
                                         className="w-full h-full object-cover"
-                                        loading="lazy"
                                     />
                                 </button>
                             ))}
@@ -110,14 +107,11 @@ export default function Team() {
                                 <img
                                     key={idx}
                                     src={member.image}
-                                    alt={`Photo de ${member.name}, ${member.role}`}
-                                    width="400"
-                                    height="700"
+                                    alt={member.name}
                                     className={`absolute inset-0 w-full h-full object-cover transition-all duration-1000 ease-[cubic-bezier(0.22,1,0.36,1)] ${activeIdx === idx
                                         ? 'opacity-100 scale-100 blur-0'
                                         : 'opacity-0 scale-110 blur-xl'
                                         }`}
-                                    loading="lazy"
                                 />
                             ))}
                             {/* Inner Border/Glow for detail */}
@@ -149,10 +143,9 @@ export default function Team() {
 
                             <button
                                 onClick={nextMember}
-                                aria-label="Voir le membre suivant de l'équipe"
                                 className="group w-20 h-20 rounded-full bg-[#FFD700] hover:bg-black text-graphite hover:text-white flex items-center justify-center transition-all duration-300 hover:scale-110 shadow-xl hover:shadow-2xl mt-4"
                             >
-                                <ChevronRight size={32} strokeWidth={3} className="group-hover:translate-x-1 transition-transform" aria-hidden="true" />
+                                <ChevronRight size={32} strokeWidth={3} className="group-hover:translate-x-1 transition-transform" />
                             </button>
                         </div>
                     </div>

@@ -62,8 +62,8 @@ export default function Approach() {
                 </div>
             </div>
 
-            <div className="mt-16 text-center">
-                <a href="#contact" className="inline-flex items-center justify-center gap-2 bg-white text-graphite hover:bg-gray-100 px-8 py-4 rounded-full font-bold text-lg transition-all shadow-lg hover:-translate-y-1">
+            <div className="mt-16 text-center relative z-10">
+                <a href="#contact" className="inline-flex items-center justify-center gap-2 px-8 py-4 rounded-full font-bold text-lg bg-white text-obsidian hover:bg-primary hover:text-white transition-all shadow-[0_0_20px_rgba(47,47,47,0.1)] hover:shadow-[0_0_20px_rgba(76,110,245,0.4)] hover:-translate-y-0.5 duration-200 cursor-pointer">
                     {t.nav.bookCall}
                     <ArrowRight size={20} />
                 </a>

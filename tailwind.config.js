@@ -17,6 +17,8 @@ export default {
         'accent-green': '#2ecc71',
         'light-slate': '#e5e7eb',
         background: '#f8f9fa',
+        'brand-logo': '#6d9ec9',
+        obsidian: '#0a0a0f',
       },
       fontFamily: {
         sans: ['Inter', 'system-ui', '-apple-system', 'sans-serif'],

@@ -12,24 +12,23 @@ export default function Footer() {
         <div className="grid md:grid-cols-4 gap-8 mb-8">
           {/* Brand */}
           <div className="md:col-span-2">
-            <a href="#" className="flex items-center gap-3 mb-4 group" aria-label="LeetSwitch - Retour à l'accueil">
-              <img src="/logo.png" alt="LeetSwitch Logo" width="40" height="40" className="h-10 w-auto object-contain opacity-90 group-hover:opacity-100 transition-all group-hover:scale-110" />
-              <span className="text-2xl font-bold text-white tracking-tight">
-                Leet<span className="text-electric-blue">Switch</span>
-              </span>
+            <a href="#" className="flex items-center gap-3 mb-4 group">
+              <img src="/logo.png" alt="LeetSwitch Mark" className="h-10 w-auto object-contain opacity-90 group-hover:opacity-100 transition-all group-hover:scale-110" />
+              Leet<span className="text-[#6d9ec9]">Switch</span>
+
             </a>
             <p className="mt-4 text-white/60 max-w-sm">
               {t.footer.description}
             </p>
-            <div className="flex gap-4 mt-6" role="list" aria-label="Réseaux sociaux">
-              <a href="#" className="w-10 h-10 rounded-lg bg-white/10 hover:bg-primary flex items-center justify-center transition-colors" aria-label="Suivez-nous sur LinkedIn" role="listitem">
-                <Linkedin size={18} aria-hidden="true" />
+            <div className="flex gap-4 mt-6">
+              <a href="#" className="w-10 h-10 rounded-lg bg-white/10 hover:bg-primary flex items-center justify-center transition-colors">
+                <Linkedin size={18} />
               </a>
-              <a href="#" className="w-10 h-10 rounded-lg bg-white/10 hover:bg-primary flex items-center justify-center transition-colors" aria-label="Suivez-nous sur Twitter" role="listitem">
-                <Twitter size={18} aria-hidden="true" />
+              <a href="#" className="w-10 h-10 rounded-lg bg-white/10 hover:bg-primary flex items-center justify-center transition-colors">
+                <Twitter size={18} />
               </a>
-              <a href="mailto:hello@leetswitch.com" className="w-10 h-10 rounded-lg bg-white/10 hover:bg-primary flex items-center justify-center transition-colors" aria-label="Envoyez-nous un email" role="listitem">
-                <Mail size={18} aria-hidden="true" />
+              <a href="mailto:contact@leetswitch.com" className="w-10 h-10 rounded-lg bg-white/10 hover:bg-primary flex items-center justify-center transition-colors">
+                <Mail size={18} />
               </a>
             </div>
           </div>

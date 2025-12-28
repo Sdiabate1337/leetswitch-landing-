@@ -9,7 +9,7 @@ export default function Hero() {
     <section className="relative pt-24 pb-12 lg:pt-48 lg:pb-32 overflow-hidden bg-background min-h-[80vh] sm:min-h-[90vh] flex items-center">
       {/* Cinematic Background Layer */}
       {/* Professional Background Layer */}
-      <div className="absolute inset-0 pointer-events-none overflow-hidden bg-[#0a0a0f]">
+      <div className="absolute inset-0 pointer-events-none overflow-hidden">
 
         {/* 1. Grain/Noise Texture - The "Expensive" Feel */}
         <div
@@ -44,20 +44,18 @@ export default function Hero() {
           </span>
         </div>
 
-        <h1 className={`${isFrench ? 'text-3xl sm:text-6xl lg:text-[5rem]' : 'text-4xl sm:text-7xl lg:text-[6rem]'} font-bold text-white tracking-tight leading-[1.05] sm:leading-[1] mb-6 sm:mb-8 transition-all duration-300`}>
+        <h1 className={`${isFrench ? 'text-3xl sm:text-6xl lg:text-[5rem]' : 'text-4xl sm:text-7xl lg:text-[6rem]'} font-bold text-graphite tracking-tight leading-[1.05] sm:leading-[1] mb-6 sm:mb-8 transition-all duration-300`}>
           {t.hero.titleLine1} <br />
           {t.hero.titleLine2} <span className="text-primary">{t.hero.titleSpan}</span>.
         </h1>
 
-        <p className={`${isFrench ? 'text-base sm:text-xl' : 'text-lg sm:text-2xl'} text-soft-indigo/90 mb-10 sm:mb-12 max-w-3xl mx-auto leading-relaxed font-medium px-4 sm:px-0 transition-all duration-300`}>
+        <p className={`${isFrench ? 'text-base sm:text-xl' : 'text-lg sm:text-2xl'} text-graphite/80 mb-10 sm:mb-12 max-w-3xl mx-auto leading-relaxed font-medium px-4 sm:px-0 transition-all duration-300`}>
           {t.hero.subtitle}
         </p>
 
         <div className="flex flex-col sm:flex-row gap-4 justify-center items-center w-full mb-16">
           <a
-            href="https://calendly.com/diabatesekou1337/audit-offerte-leetswitch"
-            target="_blank"
-            rel="noopener noreferrer"
+            href="#contact"
             className="inline-flex items-center justify-center gap-2 bg-primary hover:bg-primary-light text-white px-10 py-5 rounded-full font-bold text-xl transition-all shadow-xl shadow-primary/20 hover:shadow-2xl hover:-translate-y-1 min-w-[200px]"
           >
             {t.hero.ctaPrimary}

@@ -79,14 +79,9 @@ export default function Contact() {
                         <div className="bg-white/5 p-4 rounded-xl text-xs text-light-slate/50 mb-8 leading-relaxed">
                             {t.contact.options.audit.desc}
                         </div>
-                        <a
-                            href="https://calendly.com/diabatesekou1337/audit-offerte-leetswitch"
-                            target="_blank"
-                            rel="noopener noreferrer"
-                            className="block w-full text-center border border-white/10 hover:bg-white hover:text-graphite text-white font-bold py-4 rounded-xl transition-all mb-4"
-                        >
+                        <button className="w-full border border-white/10 hover:bg-white hover:text-graphite text-white font-bold py-4 rounded-xl transition-all mb-4">
                             {t.contact.options.audit.button}
-                        </a>
+                        </button>
                         <div className="text-center text-xs text-light-slate/40">
                             {t.contact.options.audit.note}
                         </div>
@@ -112,7 +107,7 @@ export default function Contact() {
                         <div className="bg-white/5 p-4 rounded-xl text-xs text-light-slate/50 mb-8 leading-relaxed">
                             {t.contact.options.email.desc}
                         </div>
-                        <a href="mailto:hello@leetswitch.com" className="block w-full text-center border border-white/10 hover:bg-white hover:text-graphite text-white font-bold py-4 rounded-xl transition-all mb-4">
+                        <a href="mailto:contact@leetswitch.com" className="block w-full text-center border border-white/10 hover:bg-white hover:text-graphite text-white font-bold py-4 rounded-xl transition-all mb-4">
                             {t.contact.options.email.button}
                         </a>
                         <div className="text-center text-xs text-light-slate/40">
