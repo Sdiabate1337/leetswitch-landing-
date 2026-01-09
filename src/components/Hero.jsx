@@ -22,10 +22,15 @@ export default function Hero() {
         {/* 2. The Spotlight "God Ray" - Single Source of Truth */}
         <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[800px] h-[600px] bg-[radial-gradient(circle_at_center,rgba(76,110,245,0.15)_0%,rgba(76,110,245,0)_70%)] blur-[80px]" />
 
-        {/* 3. The Grid - Structured Engineering */}
-        <div className="absolute inset-0 bg-[linear-gradient(to_right,#80808012_1px,transparent_1px),linear-gradient(to_bottom,#80808012_1px,transparent_1px)] bg-[size:24px_24px] [mask-image:radial-gradient(ellipse_60%_50%_at_50%_0%,#000_70%,transparent_100%)]" />
+        {/* 3. The Grid - Structured Engineering with Animation */}
+        <div className="absolute inset-0 bg-[linear-gradient(to_right,#80808012_1px,transparent_1px),linear-gradient(to_bottom,#80808012_1px,transparent_1px)] bg-[size:24px_24px] [mask-image:radial-gradient(ellipse_60%_50%_at_50%_0%,#000_70%,transparent_100%)] animate-grid-move" />
 
-        {/* 4. Subtle Accent Glows (Restrained) */}
+        {/* 4. Scanning Line Effect */}
+        <div className="absolute inset-0 overflow-hidden pointer-events-none">
+          <div className="absolute left-0 w-full h-[2px] bg-gradient-to-r from-transparent via-primary/10 to-transparent scan-line" />
+        </div>
+
+        {/* 5. Subtle Accent Glows (Restrained) */}
         <div className="absolute top-[-100px] left-1/4 w-[300px] h-[300px] bg-primary/20 rounded-full blur-[100px] opacity-40" />
         <div className="absolute top-[-100px] right-1/4 w-[300px] h-[300px] bg-electric-blue/10 rounded-full blur-[100px] opacity-40" />
 
