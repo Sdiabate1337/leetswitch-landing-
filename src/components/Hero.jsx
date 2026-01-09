@@ -3,7 +3,7 @@ import { useLanguage } from '../context/LanguageContext';
 
 export default function Hero() {
   const { t, language } = useLanguage();
-  const isFrench = language === 'fr';
+
 
   return (
     <section className="relative pt-24 pb-12 lg:pt-48 lg:pb-32 overflow-hidden bg-background min-h-[80vh] sm:min-h-[90vh] flex items-center">
@@ -49,12 +49,12 @@ export default function Hero() {
           </span>
         </div>
 
-        <h1 className={`${isFrench ? 'text-3xl sm:text-6xl lg:text-[5rem]' : 'text-4xl sm:text-7xl lg:text-[6rem]'} font-bold text-graphite tracking-tight leading-[1.05] sm:leading-[1] mb-6 sm:mb-8 transition-all duration-300`}>
+        <h1 className="text-4xl sm:text-7xl lg:text-[6rem] font-bold text-graphite tracking-tight leading-[1.05] sm:leading-[1] mb-6 sm:mb-8 transition-all duration-300">
           {t.hero.titleLine1} <br />
           {t.hero.titleLine2} <span className="text-primary">{t.hero.titleSpan}</span>.
         </h1>
 
-        <p className={`${isFrench ? 'text-base sm:text-xl' : 'text-lg sm:text-2xl'} text-graphite/80 mb-10 sm:mb-12 max-w-3xl mx-auto leading-relaxed font-medium px-4 sm:px-0 transition-all duration-300`}>
+        <p className="text-lg sm:text-2xl text-graphite/80 mb-10 sm:mb-12 max-w-3xl mx-auto leading-relaxed font-medium px-4 sm:px-0 transition-all duration-300">
           {t.hero.subtitle}
         </p>
 
