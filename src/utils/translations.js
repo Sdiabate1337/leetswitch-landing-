@@ -123,16 +123,16 @@ export const translations = {
             members: [
 
                 {
+                    name: 'Anas Fennoune',
+                    role: 'Co-Founder & AI Sales Lead',
+                    bio: '"Automation must drive revenue. From 1337 to business strategy, I ensure every AI agent we deploy directly impacts your bottom line and sales velocity."',
+                    image: '/anas.png'
+                },
+                {
                     name: 'Sekou Diabate',
                     role: 'Co-Founder & AI Automation Lead',
                     bio: '"Automation isn\'t just about speed. As a 1337 Alumni, I build systems that are not just intelligent, but bulletproof. Your scalability relies on a rock-solid foundation."',
                     image: '/sekou.png'
-                },
-                {
-                    name: 'Anas Fennoune',
-                    role: 'Co-Founder & AI Sales Lead',
-                    bio: '"Automation must drive revenue. From 1337 to business strategy, I ensure every AI agent we deploy directly impacts your bottom line and sales velocity."',
-                    image: 'https://images.unsplash.com/photo-1500648767791-00dcc994a43e?q=80&w=1000&auto=format&fit=crop'
                 },
                 {
                     name: 'Ayoub Moukzine',
@@ -641,16 +641,16 @@ export const translations = {
             members: [
 
                 {
+                    name: 'Anas Fennoune',
+                    role: 'Co-Fondateur & AI Sales Lead',
+                    bio: '"L\'automatisation doit servir le revenu. De 1337 à la stratégie business, je m\'assure que chaque agent IA impacte directement votre bottom line et vos ventes."',
+                    image: '/anas.png'
+                },
+                {
                     name: 'Sekou Diabate',
                     role: 'Co-Fondateur & AI Automation Lead',
                     bio: '"L\'automatisation n\'est pas qu\'une question de vitesse. En tant qu\'Alumni 1337, je construis des systèmes non seulement intelligents, mais blindés. Votre scalabilité repose sur des fondations solides."',
                     image: '/sekou.png'
-                },
-                {
-                    name: 'Anas Fennoune',
-                    role: 'Co-Fondateur & AI Sales Lead',
-                    bio: '"L\'automatisation doit servir le revenu. De 1337 à la stratégie business, je m\'assure que chaque agent IA impacte directement votre bottom line et vos ventes."',
-                    image: 'https://images.unsplash.com/photo-1500648767791-00dcc994a43e?q=80&w=1000&auto=format&fit=crop'
                 },
                 {
                     name: 'Ayoub Moukzine',
